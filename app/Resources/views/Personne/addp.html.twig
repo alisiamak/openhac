@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block css %}
+<style>
+ .lab{width: 20%}
+ .lab{background:#BDBDBD}
+ .bt{width: 150%}
+
+
+</style>
+{% endblock %}
+
+{% block body %}
+<h3>Personne</h3>
+<div class="form-inline well">
+{{ form_start(form) }}
+
+<div class="form-group">
+    {{ form_label(form.nome, 'Nome : ') }}
+    {{ form_errors(form.nome) }}
+    {{ form_widget(form.nome, {'attr':
+      {
+        'class': 'lab',
+
+
+      }
+    })
+    }}
+  </div>
+  <div class="form-group">
+      {{ form_label(form.prenome, 'prenome : ') }}
+
+      {{ form_widget(form.prenome, {'attr':
+        {
+          'class': 'lab',
+
+
+        }
+      })
+      }}
+    </div>
+    <div class="form-group">
+        {{ form_label(form.travaile, 'Travaile : ') }}
+        {{ form_errors(form.travaile) }}
+        {{ form_widget(form.travaile, {'attr':
+          {
+            'class': 'lab',
+
+
+          }
+        })
+        }}
+      </div>
+
+  <div class="form-group">
+    {{ form_label(form.submit) }}
+    {{
+      form_widget(form.submit, {'attr': {
+        'class': 'btn btn-xs btn-primary bt'
+      }})
+    }}
+  </div>
+
+{{ form_end(form) }}
+</div>
+
+
+
+
+
+{% endblock %}

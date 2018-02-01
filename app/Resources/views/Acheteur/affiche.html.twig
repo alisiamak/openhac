@@ -1,0 +1,46 @@
+{% extends 'default/home.html.twig' %}
+{% block css %}
+<style>
+ .titre {color: green}
+</style>
+{% endblock %}
+{% block body %}
+
+<h2 class="titre">Liste des Acheteur</h2>
+<table class="table well table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Telephone</th>
+        <th>adress</th>
+        <th>modifier</th>
+      </tr>
+    </thead>
+    <tbody>
+     {% for p in acheteur %}
+      <tr>
+        <td>{{ p.nom  }}</td>
+        <td>{{ p.telephone  }}</td>
+        <td>{{ p.adress  }}</td>
+        <td>
+
+          <a
+            class="btn btn-primary btn-xs"
+            href="">Modifier</a>
+          <a
+            class="btn btn-danger btn-xs"
+            href="">Supprimer</a>
+        </td>
+      </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+
+</style>
+{% endblock %}

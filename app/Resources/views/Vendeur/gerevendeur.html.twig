@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}FARHAD!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+      <nav>
+        <ul class="nav nav-tabs">
+          <li><a href="{{ path('homepage') }}">Homepage</a></li>
+          <li><a href="{{ path('addvendeur') }}">Ajouter Vendeur</a></li>
+          <li><a href="{{ path('affichevendeur') }}">Afficher Vendeur</a></li>
+
+
+
+
+
+          </li>
+        </ul>
+      </nav>
+
+        {% block css %}{% endblock %}
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

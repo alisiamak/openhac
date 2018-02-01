@@ -1,0 +1,320 @@
+{% extends 'default/home.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block css %}
+<style>
+ .lab{width: 20%}
+ .lab{background:#BDBDBD}
+ .bt{width: 150%}
+
+
+</style>
+{% endblock %}
+
+{% block body %}
+<h3>Formulaire d'ajoute un Marchandis</h3>
+<div class="form-inline well">
+{{ form_start(form)}}
+  <div class="form-group col-sm-offset-1">
+    <div class="form-group">
+      {{ form_label(form.nom, 'Nom : ') }}
+      {{ form_errors(form.nom) }}
+      {{ form_widget(form.nom, {'attr':
+        {
+          'class': 'lab',
+
+
+        }
+     })
+    }}
+  </div>
+  <div class="form-group">
+      {{ form_label(form.color, 'Color : ') }}
+      {{ form_errors(form.color) }}
+      {{ form_widget(form.color, {'attr':
+        {
+          'class': 'lab',
+
+
+
+        }
+      })
+      }}
+    </div>
+    <div class="form-group">
+        {{ form_label(form.origine, 'Origine : ') }}
+        {{ form_errors(form.origine) }}
+        {{ form_widget(form.origine, {'attr':
+          {
+            'class': 'lab',
+
+
+          }
+        })
+        }}
+    </div>
+    <div class="form-group">
+          {{ form_label(form.hauter, 'Hauter : ') }}
+          {{ form_errors(form.hauter) }}
+          {{ form_widget(form.hauter, {'attr':
+            {
+              'class': 'lab',
+
+
+            }
+          })
+          }}
+      </div>
+  </div>
+  </br>
+  </br>
+  </br>
+
+  <div class="form-group col-sm-offset-1">
+      <div class="form-group">
+              {{ form_label(form.largeur, 'Largeur : ') }}
+              {{ form_errors(form.largeur) }}
+              {{ form_widget(form.largeur, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+      <div class="form-group">
+              {{ form_label(form.age, 'Age : ') }}
+              {{ form_errors(form.age) }}
+              {{ form_widget(form.age, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+      <div class="form-group">
+              {{ form_label(form.dateachat, 'Date_Achat : ') }}
+              {{ form_errors(form.dateachat) }}
+              {{ form_widget(form.dateachat, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+      <div class="form-group">
+              {{ form_label(form.datevendre, 'Date_Vendre : ') }}
+              {{ form_errors(form.datevendre) }}
+              {{ form_widget(form.datevendre, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+    </div>
+  </br>
+  </br>
+  </br>
+  <div class="form-group col-sm-offset-1">
+    <div class="form-group">
+              {{ form_label(form.dateprete, 'Date_Préte : ') }}
+              {{ form_errors(form.dateprete) }}
+              {{ form_widget(form.dateprete, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+      <div class="form-group">
+              {{ form_label(form.daterendu, 'Date_Rendu : ') }}
+              {{ form_errors(form.daterendu) }}
+              {{ form_widget(form.daterendu, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+      <div class="form-group">
+              {{ form_label(form.preteur, 'Préteur : ') }}
+              {{ form_errors(form.preteur) }}
+              {{ form_widget(form.preteur, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+      <div class="form-group">
+              {{ form_label(form.vendeur, 'Vendeur : ') }}
+              {{ form_errors(form.vendeur) }}
+              {{ form_widget(form.vendeur, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+    </div>
+  </br>
+  </br>
+  </br>
+    <div class="form-group col-sm-offset-1">
+
+      <div class="form-group">
+              {{ form_label(form.acheteur, 'Acheteur : ') }}
+              {{ form_errors(form.acheteur) }}
+              {{ form_widget(form.acheteur, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+      <div class="form-group">
+              {{ form_label(form.datesoumetrereparation, 'Date_Soumetre_Reparation : ') }}
+              {{ form_errors(form.datesoumetrereparation) }}
+              {{ form_widget(form.datesoumetrereparation, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+      <div class="form-group">
+              {{ form_label(form.daterendureparation, 'Date_Rendu_Reparation : ') }}
+              {{ form_errors(form.daterendureparation) }}
+              {{ form_widget(form.daterendureparation, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+    </div>
+  </br>
+  </br>
+  </br>
+  <div class="form-group col-sm-offset-1">
+      <div class="form-group">
+              {{ form_label(form.prixreparation, 'Prix_Reparation : ') }}
+              {{ form_errors(form.prixreparation) }}
+              {{ form_widget(form.prixreparation, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+
+      <div class="form-group">
+              {{ form_label(form.prixachat, 'Prix_Achat : ') }}
+              {{ form_errors(form.prixachat) }}
+              {{ form_widget(form.prixachat, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+      <div class="form-group">
+              {{ form_label(form.prixvendre, 'Prix_Vendre : ') }}
+              {{ form_errors(form.prixvendre) }}
+              {{ form_widget(form.prixvendre, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+    </div>
+  </br>
+  </br>
+  </br>
+  <div class="form-group col-sm-offset-1">
+      <div class="form-group">
+              {{ form_label(form.reparateur, 'Reparateur : ') }}
+              {{ form_errors(form.reparateur) }}
+              {{ form_widget(form.reparateur, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+      <div class="form-group">
+              {{ form_label(form.photo, 'Photo : ') }}
+              {{ form_errors(form.photo) }}
+              {{ form_widget(form.photo, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+      </div>
+      <div class="form-group">
+              {{ form_label(form.location, 'Location : ') }}
+              {{ form_errors(form.location) }}
+              {{ form_widget(form.location, {'attr':
+                {
+                  'class': 'lab',
+
+
+                }
+              })
+      }}
+     </div>
+   </div>
+ </br>
+ </br>
+ </br>
+  <div class="form-group col-sm-offset-5 col-sm-1">
+    {{ form_label(form.submit) }}
+    {{
+      form_widget(form.submit, {'attr': {
+        'class': 'btn btn-xs btn-primary bt'
+      }})
+    }}
+  </div>
+  </br>
+
+{{ form_end(form) }}
+</div>
+
+
+
+
+
+{% endblock %}

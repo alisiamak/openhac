@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}FARHAD!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+      <nav>
+        <ul class="nav nav-tabs">
+          <li><a href="{{ path('homepage') }}">Homepage</a></li>
+          <li><a href="{{ path('addarticle') }}">Ajote_un_article</a></li>
+          <li><a href="{{ path('gerereparateur') }}">Gérere Reparateur</a></li>
+          <li><a href="{{ path('gerermarchandis') }}">Gérere Marchandis</a></li>
+          <li><a href="{{ path('gerevendeur') }}">Gérere Vendeur</a></li>
+          <li><a href="{{ path('gereacheteur') }}">Gérere Acheteur</a></li>
+          <li><a href="{{ path('gerepreteur') }}">Gérere Preteur</a></li>
+          <img src="../Resources/views/default/image.jpg">
+
+
+
+
+          </li>
+        </ul>
+      </nav>
+
+        {% block css %}{% endblock %}
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,71 @@
+{% extends 'default/home.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block css %}
+<style>
+ .lab{width: 20%}
+ .lab{background:#BDBDBD}
+ .bt{width: 150%}
+
+
+</style>
+{% endblock %}
+
+{% block body %}
+<h3>Formulaire d'ajoute un Acheteur</h3>
+<div class="form-inline well">
+{{ form_start(form)}}
+
+<div class="form-group">
+    {{ form_label(form.nom, 'Nom : ') }}
+    {{ form_errors(form.nom) }}
+    {{ form_widget(form.nom, {'attr':
+      {
+        'class': 'lab',
+
+
+      }
+    })
+    }}
+  </div>
+  <div class="form-group">
+      {{ form_label(form.telephone, 'Telephon : ') }}
+      {{ form_errors(form.telephone) }}
+      {{ form_widget(form.telephone, {'attr':
+        {
+          'class': 'lab',
+
+
+
+        }
+      })
+      }}
+    </div>
+    <div class="form-group">
+        {{ form_label(form.adress, 'Adress : ') }}
+        {{ form_errors(form.adress) }}
+        {{ form_widget(form.adress, {'attr':
+          {
+            'class': 'lab',
+
+
+          }
+        })
+        }}
+      </div>
+  <div class="form-group">
+    {{ form_label(form.submit) }}
+    {{
+      form_widget(form.submit, {'attr': {
+        'class': 'btn btn-xs btn-primary bt'
+      }})
+    }}
+  </div>
+
+{{ form_end(form) }}
+</div>
+
+
+
+
+
+{% endblock %}

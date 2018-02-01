@@ -1,0 +1,88 @@
+{% extends 'default/home.html.twig' %}
+{% block css %}
+<style>
+ .titre {color: green}
+</style>
+{% endblock %}
+{% block body %}
+
+<h2 class="titre">Liste des Marchandis</h2>
+<table class="table well table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>NOM</th>
+        <th>ORIGINE</th>
+        <th>COLOR</th>
+        <th>HAUTEUR</th>
+        <th>LARGEUR</th>
+        <th>AGE</th>
+        <th>DATE_ACHAT</th>
+        <th>DATE_VENDRE</th>
+        <th>DATE_PRÉTRE</th>
+        <th>DATE_RENDU</th>
+        <th>PRETEUR</th>
+        <th>VENDEUR</th>
+        <th>ACHETEUR</th>
+        <th>DATE_SOUMETTRE_REPARATION</th>
+        <th>DATE_RENDU_REPARATION</th>
+        <th>PRIX_REPARATION</th>
+        <th>PRIX_ACHAT</th>
+        <th>PRIX_VENDRE</th>
+        <th>REPARATEUR</th>
+        <th>PHOTO</th>
+        <th>LOCATION</th>
+      </tr>
+    </thead>
+    <tbody>
+     {% for p in marchandis %}
+      <tr>
+        <td>{{ p.nom.nom  }}</td>
+        <td>{{ p.origine  }}</td>
+        <td>{{ p.color  }}</td>
+        <td>{{ p.hauter  }}</td>
+        <td>{{ p.largeur  }}</td>
+        <td>{{ p.age  }}</td>
+        <td>{{ p.dateachat  }}</td>
+        <td>{{ p.datevendre  }}</td>
+        <td>{{ p.dateprete  }}</td>
+        <td>{{ p.daterendu }}</td>
+        <td>{% if p.preteur == NULL %}
+            {{ "" }}
+          {% else %}
+            {{ p.preteur.nom  }}
+          {% endif %}</td>
+          <td>{% if p.vendeur == NULL %}
+              {{ "" }}
+            {% else %}
+              {{ p.vendeur.nom  }}
+            {% endif %}</td>
+            <td>{% if p.acheteur == NULL %}
+                {{ "" }}
+              {% else %}
+                {{ p.acheteur.nom  }}
+              {% endif %}</td>
+        <td>{{ p.datesoumetrereparation  }}</td>
+        <td>{{ p.daterendureparation  }}</td>
+        <td>{{ p.prixreparation  }}</td>
+        <td>{{ p.prixachat  }}</td>
+        <td>{{ p.prixvendre }}</td>
+        <td>{% if p.reparateur == NULL %}
+            {{ "" }}
+          {% else %}
+            {{ p.reparateur.nom  }}
+          {% endif %}</td>
+        <td>{{ p.photo  }}</td>
+        <td>{{ p.location  }}</td>
+      </tr>
+     {% endfor %}
+    </tbody>
+  </table>
+
+
+{% endblock %}
+
+{% block stylesheets %}
+<style>
+
+</style>
+{% endblock %}
